@@ -7,7 +7,7 @@
   "scripts": {
     "build": "grunt",
     "test": "grunt mochaTest",
-    "server": "cd dist/server && node mongodb-proxy.js"
+    "server": "cd dist/server && node --max-old-space-size=4096 mongodb-proxy.js"
   },
   "repository": {
     "type": "git",
