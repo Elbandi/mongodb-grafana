@@ -232,7 +232,7 @@ function parseQuery(query, substitutions)
     }
   
     // Args is the rest up to the last bracket
-    var closeBracketIndex = query.indexOf(')', openBracketIndex)
+    var closeBracketIndex = query.lastIndexOf(')')
     if (closeBracketIndex == -1)
     {
       queryErrors.push("Can't find last bracket")
@@ -408,7 +408,7 @@ function getTimeseriesResults(docs)
     }
     else
     {
-      dp = { 'target' : tg, 'datapoints' : [] }
+      dp = { 'target' : tg, 'alias' : tg, 'label' : tg, 'datapoints' : [] }
       results[tg] = dp
     }
     
