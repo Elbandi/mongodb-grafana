@@ -39,11 +39,11 @@ module.exports = function(grunt) {
     babel: {
       options: {
         sourceMap: true,
-        presets:  ['es2015']
+        presets:  ['@babel/preset-env']
       },
       dist: {
         options: {
-          plugins: ['transform-es2015-modules-systemjs', 'transform-es2015-for-of']
+          plugins: ['@babel/plugin-transform-for-of']
         },
         files: [{
           cwd: 'src',
